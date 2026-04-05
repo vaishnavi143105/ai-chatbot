@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nova AI — Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-icon">N</div>
+        <span class="logo-text">Nova<span class="logo-accent">AI</span></span>
+      </div>
+
+      <button class="new-chat-btn" id="newChatBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        New Chat
+      </button>
+
+      <div class="chat-history-label">Recent</div>
+      <ul class="chat-history" id="chatHistory">
+        <li class="history-item active">Getting started</li>
+        <li class="history-item">What is the universe?</li>
+        <li class="history-item">Recipe for pasta</li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="user-avatar">U</div>
+        <div class="user-info">
+          <span class="user-name">You</span>
+          <span class="user-plan">Free Plan</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-area">
+
+      <!-- Header -->
+      <header class="chat-header">
+        <button class="menu-toggle" id="menuToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="header-title">Nova AI</div>
+        <div class="header-status">
+          <span class="status-dot"></span> Online
+        </div>
+      </header>
+
+      <!-- Messages -->
+      <div class="messages-container" id="messagesContainer">
+        <!-- Welcome Screen -->
+        <div class="welcome-screen" id="welcomeScreen">
+          <div class="welcome-glow"></div>
+          <div class="welcome-icon">✦</div>
+          <h1 class="welcome-title">How can I help you?</h1>
+          <p class="welcome-sub">Ask me anything — I'm here to assist.</p>
+          <div class="suggestion-chips">
+            <button class="chip" data-text="Explain quantum computing simply">⚛ Quantum computing</button>
+            <button class="chip" data-text="Write a short poem about the sea">🌊 Write a poem</button>
+            <button class="chip" data-text="Give me 5 productivity tips">⚡ Productivity tips</button>
+            <button class="chip" data-text="What is machine learning?">🤖 Machine learning</button>
+          </div>
+        </div>
+
+        <!-- Messages will appear here -->
+        <div class="messages-list" id="messagesList"></div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="input-area">
+        <div class="input-wrapper">
+          <textarea
+            id="userInput"
+            class="chat-input"
+            placeholder="Message Nova AI..."
+            rows="1"
+          ></textarea>
+          <button class="send-btn" id="sendBtn" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/>
+            </svg>
+          </button>
+        </div>
+        <p class="input-hint">Nova AI can make mistakes. Verify important info.</p>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
