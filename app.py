@@ -5,7 +5,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-API_KEY = "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"   # 🔴 Replace this
+API_KEY = "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"   # 🔴 Replace this
 
 @app.route('/')
 def home():
